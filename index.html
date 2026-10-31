@@ -61,7 +61,7 @@ footer .note{margin:0; color:var(--muted); font-size:14px}
 h2{color:#e3e7f0;text-transform:none;letter-spacing:-.01em;font-size:22px;font-weight:700}
 .card{background:#212734d9;border:1px solid #262c3a;border-radius:4px;padding:20px;backdrop-filter:blur(8px);box-shadow:0 2px 6px rgba(0,0,0,.08)}
 body::before{content:'';display:block;height:5px;background:#94a3b8;position:sticky;top:0;z-index:9}
-background-image:radial-gradient(#262c3a 1px, transparent 1px);background-size:22px 22px;
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(#262c3a 1px, transparent 1px);background-size:22px 22px}
 </style>
 </head>
 <body>
@@ -76,7 +76,7 @@ background-image:radial-gradient(#262c3a 1px, transparent 1px);background-size:2
 
 <section class="about" id="about">
   <h2>关于</h2>
-  <p>流式中断恢复这件事，值得有人把它讲明白。</p>
+  <p>流式中断恢复这件事，值得有人把它讲明白。 当前以硕士阶段研究角色的方式推进项目。</p>
   <ul class="traits">
     <li>先给能跑的东西，再讲原理。</li>
     <li>文档里能给命令就不给截图。</li>
@@ -89,12 +89,20 @@ background-image:radial-gradient(#262c3a 1px, transparent 1px);background-size:2
   <div class="grid two">
     <article class="card">
       <h3>流式中断恢复里常见的误判模式</h3>
+      <span class="status">持续跟进</span>
     </article>
     <article class="card">
       <h3>流式中断恢复的判定依据与复核方式</h3>
+      <span class="status">持续跟进</span>
     </article>
     <article class="card">
       <h3>流式中断恢复里容易误判的情形与反例</h3>
+      <span class="status">持续跟进</span>
+    </article>
+    <article class="card">
+      <h3>在推进的问题</h3>
+      <p>（流式中断恢复场景）在流式中断恢复上，哪些输入看起来正常但结论是错的？用延迟与分位统计构造可复现的误判样例。</p>
+      <span class="status">进行中</span>
     </article>
   </div>
 </section>
@@ -102,6 +110,9 @@ background-image:radial-gradient(#262c3a 1px, transparent 1px);background-size:2
 <section id="work">
   <h2>开源</h2>
   <ul class="repos">
+    <li><div class="name"><a href="https://github.com/fiftzed/latency_counterexample_search_14b59248" rel="noopener">latency_counterexample_search_14b59248</a></div>
+      <div class="desc">（流式中断恢复场景）在流式中断恢复上，哪些输入看起来正常但结论是错的？用延迟与分位统计构造可复现的误判样例。</div>
+    </li>
     <li><div class="name"><a href="https://github.com/fiftzed/streamresume" rel="noopener">streamresume</a></div>
       <div class="desc">沿流式记录标出中断点与恢复行为，标出产生重复或丢失的位置</div>
     </li>
